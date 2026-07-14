@@ -25,7 +25,6 @@ async function renderWork() {
         </div>
         <div class="meta">
           <span class="tag">${item.tag}</span>
-          <div class="title">${item.title}</div>
         </div>
       </article>
     `

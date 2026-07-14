@@ -175,12 +175,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.work-card .title {
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
 /* Contact */
