@@ -157,6 +157,12 @@ a { color: inherit; text-decoration: none; }
 
 .work h2 {
   font-size: 1.75rem;
+  margin: 0 0 12px;
+}
+
+.work-sub {
+  color: var(--muted);
+  max-width: 640px;
   margin: 0 0 32px;
 }
 
