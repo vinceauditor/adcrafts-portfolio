@@ -240,8 +240,8 @@ a { color: inherit; text-decoration: none; }
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 32px;
 }
 
 .results-grid img {
