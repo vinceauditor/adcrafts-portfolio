@@ -371,6 +371,28 @@ a { color: inherit; text-decoration: none; }
 
 .whatsapp-text span { font-size: 1.1rem; opacity: 0.85; }
 
+.email-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 18px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.email-cta:hover { transform: translateY(-1px); border-color: var(--accent); }
+
+.email-icon svg { width: 30px; height: 30px; display: block; color: var(--accent); }
+
+.email-text { display: flex; flex-direction: column; text-align: left; line-height: 1.25; }
+
+.email-text strong { font-size: 1.25rem; }
+
+.email-text span { font-size: 1.1rem; opacity: 0.85; }
+
 .service-badge {
   display: inline-flex;
   align-items: center;
