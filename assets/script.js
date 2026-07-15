@@ -2,6 +2,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 async function renderWork() {
   const grid = document.getElementById("work-grid");
+  if (!grid) return;
+
   let items = [];
   try {
     const res = await fetch("data/work.json");
