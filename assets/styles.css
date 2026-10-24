@@ -9,7 +9,7 @@
   --accent-dim: #4a2c1f;
   --whatsapp: #25d366;
   --radius: 14px;
-  --max-width: 1440px;
+  --max-width: 1800px;
 }
 
 * { box-sizing: border-box; }
@@ -152,7 +152,7 @@ a { color: inherit; text-decoration: none; }
 .work {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 24px 32px 100px;
+  padding: 24px 24px 100px;
 }
 
 .work h2 {
@@ -235,18 +235,25 @@ a { color: inherit; text-decoration: none; }
 }
 
 .work-card .video-frame {
+  --player-scale: 0.6;
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
   background: #000;
+  overflow: hidden;
 }
 
+/* Drive's player crops the video when its iframe is narrow, so render it
+   larger than the card and scale it down to fit. */
 .work-card .video-frame iframe {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: calc(100% / var(--player-scale));
+  height: calc(100% / var(--player-scale));
   border: 0;
+  transform: scale(var(--player-scale));
+  transform-origin: 0 0;
 }
 
 /* Blocks clicks on Google Drive's built-in "open file" icon without visually covering it */
