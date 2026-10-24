@@ -1,15 +1,15 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-async function renderWork() {
-  const grid = document.getElementById("work-grid");
+async function renderWork(gridId, dataUrl) {
+  const grid = document.getElementById(gridId);
   if (!grid) return;
 
   let items = [];
   try {
-    const res = await fetch("data/work.json");
+    const res = await fetch(dataUrl);
     items = await res.json();
   } catch (err) {
-    console.error("Could not load work.json", err);
+    console.error(`Could not load ${dataUrl}`, err);
     return;
   }
 
@@ -34,4 +34,5 @@ async function renderWork() {
     .join("");
 }
 
-renderWork();
+renderWork("winners-grid", "data/winners.json");
+renderWork("work-grid", "data/work.json");
