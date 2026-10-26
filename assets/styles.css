@@ -37,10 +37,10 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Full-width brand-colored bar; content still lines up with --max-width */
+  /* Full-width white bar; content still lines up with --max-width */
   padding: 20px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
-  background: var(--accent);
-  color: #fff;
+  background: #fff;
+  color: var(--bg);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -52,18 +52,16 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.01em;
 }
 
-.site-header .wordmark .accent { color: var(--bg); }
-
 .site-header nav {
   display: flex;
   align-items: center;
   gap: 24px;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 500;
+  color: #4a4a4f;
 }
 
-.site-header nav a:hover { opacity: 0.8; }
+.site-header nav a:hover { color: var(--accent); }
 
 .nav-cta {
   color: var(--text) !important;
