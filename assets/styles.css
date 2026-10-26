@@ -34,9 +34,13 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 24px 32px;
+  /* Full-width brand-colored bar; content still lines up with --max-width */
+  padding: 20px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+  background: var(--accent);
+  color: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .wordmark {
@@ -45,24 +49,28 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.01em;
 }
 
+.site-header .wordmark .accent { color: var(--text); }
+
 .site-header nav {
   display: flex;
   align-items: center;
   gap: 24px;
   font-size: 0.95rem;
-  color: var(--muted);
+  font-weight: 500;
+  color: rgba(11, 11, 12, 0.75);
 }
 
-.site-header nav a:hover { color: var(--text); }
+.site-header nav a:hover { color: var(--bg); }
 
 .nav-cta {
   color: var(--text) !important;
-  border: 1px solid var(--border);
+  background: var(--bg);
+  border: 1px solid var(--bg);
   border-radius: 999px;
   padding: 8px 16px;
 }
 
-.nav-cta:hover { border-color: var(--accent); }
+.nav-cta:hover { background: var(--surface-2); }
 
 /* Hero */
 .hero {
