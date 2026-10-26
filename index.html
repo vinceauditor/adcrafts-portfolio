@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
-<link rel="stylesheet" href="assets/styles.css?v=8">
+<link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 <body>
 
@@ -23,38 +23,61 @@
 
 <main>
   <section class="hero" id="top">
-    <p class="eyebrow">Video Ads Editing for E-Commerce</p>
-    <h1>AI MADE <span class="accent">UGC&rsquo;s</span></h1>
-    <p class="hero-tagline">I help <span class="accent">eCommerce</span> and <span class="accent">DTC brands</span> scale with UGC, static, and VSL video ads — edited, tested, and built to convert on Meta.</p>
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">See the work</a>
-      <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+    <div class="hero-text">
+      <p class="eyebrow">Video Ads Editing for E-Commerce</p>
+      <h1>AI MADE <span class="accent">UGC&rsquo;s</span></h1>
+      <p class="hero-tagline">I help <span class="accent">eCommerce</span> and <span class="accent">DTC brands</span> scale with UGC, static, and VSL video ads — edited, tested, and built to convert on Meta.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-video">
+      <!-- Self-hosted (Drive's player can't autoplay). Browsers only allow muted autoplay;
+           viewers can unmute or pause with the controls. -->
+      <video
+        src="assets/video/intro.mp4"
+        poster="assets/video/intro-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="auto"
+        aria-label="AdCrafts Studio introduction video"
+      ></video>
     </div>
   </section>
 
-  <section class="work" id="work">
-    <div class="winners">
+  <section class="section" id="work">
+    <div class="section-head">
       <div class="winners-labels">
         <p class="winners-eyebrow">Recent winners</p>
         <p class="winners-month">&#127942; Month of October&rsquo;s Ad Winners!</p>
       </div>
       <h2><span class="accent">$100K+</span> in ad spend from just these 4 videos</h2>
-      <p class="work-sub">Our latest winning ads, each scaling for a different client on Meta.</p>
-      <div class="work-grid winners-grid" id="winners-grid">
-        <!-- Cards are rendered by script.js from data/winners.json -->
-      </div>
+      <p class="section-sub">Our latest winning ads, each scaling for a different client on Meta.</p>
     </div>
+    <div class="work-grid winners-grid" id="winners-grid">
+      <!-- Cards are rendered by script.js from data/winners.json -->
+    </div>
+  </section>
 
-    <h2>Recent work</h2>
-    <p class="work-sub">UGC, static ads, and VSLs — edited for e-commerce and DTC brands running on Meta.</p>
+  <section class="section" id="recent">
+    <div class="section-head">
+      <h2>Recent work</h2>
+      <p class="section-sub">UGC, static ads, and VSLs — edited for e-commerce and DTC brands running on Meta.</p>
+    </div>
     <div class="work-grid" id="work-grid">
       <!-- Cards are rendered by script.js from data/work.json -->
     </div>
   </section>
 
-  <section class="results" id="results">
-    <h2>Real ad account results</h2>
-    <p class="results-sub">A look at live Meta Ads Manager performance from client accounts we manage. Ad and campaign names blurred for client confidentiality.</p>
+  <section class="section" id="results">
+    <div class="section-head">
+      <h2>Real ad account results</h2>
+      <p class="section-sub">A look at live Meta Ads Manager performance from client accounts we manage. Ad and campaign names blurred for client confidentiality.</p>
+    </div>
     <div class="results-grid">
       <img src="assets/results/results-ads.png" alt="Meta Ads Manager ad-level performance data" loading="lazy">
       <img src="assets/results/results-campaigns-1.png" alt="Meta Ads Manager campaign-level performance data" loading="lazy">
@@ -68,6 +91,6 @@
   <p>&copy; <span id="year"></span> AdCrafts Studio</p>
 </footer>
 
-<script src="assets/script.js?v=8"></script>
+<script src="assets/script.js?v=13"></script>
 </body>
 </html>
