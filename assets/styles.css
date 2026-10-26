@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
   /* Full-width brand-colored bar; content still lines up with --max-width */
   padding: 20px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -52,18 +52,18 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.01em;
 }
 
-.site-header .wordmark .accent { color: var(--text); }
+.site-header .wordmark .accent { color: var(--bg); }
 
 .site-header nav {
   display: flex;
   align-items: center;
   gap: 24px;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(11, 11, 12, 0.75);
+  font-weight: 600;
+  color: #fff;
 }
 
-.site-header nav a:hover { color: var(--bg); }
+.site-header nav a:hover { opacity: 0.8; }
 
 .nav-cta {
   color: var(--text) !important;
