@@ -14,6 +14,8 @@
   --max-width: 1800px;
   --gutter: 32px;
   --section-y: clamp(64px, 7vw, 104px);
+  --nav-h: 74px;
+  --promo-h: 46px;
 
   /* Type scale */
   --fs-xs: 0.75rem;
@@ -129,6 +131,58 @@ main > .section:last-child { padding-bottom: var(--section-y); }
 
 .nav-cta:hover { background: var(--surface-2); }
 
+/* Promo banner: scrolls end to end under the nav */
+.promo-bar {
+  display: block;
+  height: var(--promo-h);
+  overflow: hidden;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.promo-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: promo-scroll 40s linear infinite;
+}
+
+.promo-bar:hover .promo-track { animation-play-state: paused; }
+
+.promo-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.promo-item {
+  padding: 0 28px;
+  font-size: var(--fs-base);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.promo-item strong {
+  margin-left: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: #fff;
+}
+
+.promo-sep { font-size: var(--fs-sm); }
+
+@keyframes promo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-track { animation: none; }
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -154,7 +208,7 @@ main > .section:last-child { padding-bottom: var(--section-y); }
 .btn-ghost:hover { border-color: var(--accent); }
 
 /* Hero: headline/copy on the left, 4:3 intro video on the right.
-   Fills the first screen (minus the sticky nav) so Recent winners starts below the fold. */
+   Fills the first screen (minus the sticky nav and promo bar) so Recent winners starts below the fold. */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
@@ -162,8 +216,8 @@ main > .section:last-child { padding-bottom: var(--section-y); }
   align-content: center;
   gap: 64px;
   max-width: 1320px; /* keeps text and video close together on wide screens */
-  min-height: calc(100vh - 74px);
-  min-height: calc(100svh - 74px);
+  min-height: calc(100vh - var(--nav-h) - var(--promo-h));
+  min-height: calc(100svh - var(--nav-h) - var(--promo-h));
   padding-top: 48px;
   padding-bottom: 48px;
 }
