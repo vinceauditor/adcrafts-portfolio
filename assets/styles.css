@@ -202,9 +202,29 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 72px;
 }
 
+.winners-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+
+/* Highlighted monthly label, e.g. "Month of October's Ad Winners!" */
+.winners-month {
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 0 24px rgba(255, 106, 61, 0.45);
+}
+
 .winners-eyebrow {
   display: inline-block;
-  margin: 0 0 14px;
+  margin: 0;
   padding: 6px 12px;
   border: 1px solid var(--accent);
   border-radius: 999px;
